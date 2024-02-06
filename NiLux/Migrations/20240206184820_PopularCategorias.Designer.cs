@@ -11,8 +11,8 @@ using NiLux.Context;
 namespace NiLux.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240205124352_PopularEventos")]
-    partial class PopularEventos
+    [Migration("20240206184820_PopularCategorias")]
+    partial class PopularCategorias
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,12 +75,12 @@ namespace NiLux.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("ImagemTumbnailURL")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<string>("ImagemURL")
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                        .HasMaxLength(2000)
+                        .HasColumnType("nvarchar(2000)");
 
                     b.Property<string>("NomeEvento")
                         .IsRequired()

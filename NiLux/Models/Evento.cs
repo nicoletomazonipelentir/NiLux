@@ -31,11 +31,11 @@ namespace NiLux.Models
         [Range(100,999999.99, ErrorMessage="Opreço deve estar entre 100 e 999999.99")]
         public decimal Preco { get; set; }
 
-        [StringLength(200, ErrorMessage = "O {0} deve ter no máximo {1}")]
+        [StringLength(2000, ErrorMessage = "O {0} deve ter no máximo {1}")]
         [Display(Name = "Caminho Imagem Normal")]
         public string ImagemURL { get; set; }
 
-        [StringLength(200, ErrorMessage = "O {0} deve ter no máximo {1}")]
+        [StringLength(2000, ErrorMessage = "O {0} deve ter no máximo {1}")]
         [Display(Name = "Caminho Imagem Miniatura")]
         public string ImagemTumbnailURL { get; set; }
 

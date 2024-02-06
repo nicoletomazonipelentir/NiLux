@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 #nullable disable
 
 namespace NiLux.Migrations
 {
     /// <inheritdoc />
-    public partial class PopularCategoria : Migration
+    public partial class PopularCategorias : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -25,6 +26,7 @@ namespace NiLux.Migrations
             migrationBuilder.Sql("INSERT INTO Categorias(CategoriaNome, Descricao) " +
                 "VALUES ('Jogo', 'Evento e um jogo, ou participacao em um jogo')");
         }
+        
 
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)

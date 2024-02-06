@@ -1,5 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using NiLux.Context;
+using NiLux.Repositorios;
+using NiLux.Repositorios.Interfaces;
 using System;
 namespace NiLux;
 public class Startup
@@ -18,6 +21,9 @@ public class Startup
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
         services.AddControllersWithViews();
+
+        services.AddTransient<IEventoRepository,EventoRepositorio>();
+        services.AddTransient<ICategoriaRepository, CategoriaRepositorio>();
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

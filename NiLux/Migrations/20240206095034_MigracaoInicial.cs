@@ -34,8 +34,8 @@ namespace NiLux.Migrations
                     DescricaoCurta = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: false),
                     DescricaoLonga = table.Column<string>(type: "nvarchar(1000)", maxLength: 1000, nullable: false),
                     Preco = table.Column<decimal>(type: "decimal(10,2)", nullable: false),
-                    ImagemURL = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
-                    ImagemTumbnailURL = table.Column<string>(type: "nvarchar(200)", maxLength: 200, nullable: true),
+                    ImagemURL = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: true),
+                    ImagemTumbnailURL = table.Column<string>(type: "nvarchar(2000)", maxLength: 2000, nullable: true),
                     EventoPreferido = table.Column<bool>(type: "bit", nullable: false),
                     EmEstoque = table.Column<bool>(type: "bit", nullable: false),
                     CategoriaId = table.Column<int>(type: "int", nullable: false)
